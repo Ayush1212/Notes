@@ -1,0 +1,4 @@
+c56254153ad344d7994efc6c9d40edb1
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+sudo systemctl status jenkins

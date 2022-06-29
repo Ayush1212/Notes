@@ -1,0 +1,460 @@
+TEST DOCUMENT
+===========================================================================================================================
+- It created before or during the testing
+- It is a text doccument that given testing team an idea how much efforts needed, test coverage, resource tracking, execution
+- It contain test planning, test design, test execution, test result
+- It can be of any format
+
+TD depends on
+------------------
+- Types of S/W we are going to test
+- Upon company policy
+
+=> TEST CASE : Step by step execution , Executing certain test and matching expected and actual(Test result) 
+
+
+LEVELS OF S/W TESTING
+=================================================================================================================================
+
+- Unit Testing
+- Integration Testing 
+- System Testing
+- UAT(User Acceptance Testing) Testing
+
+
+----------------------------------------------------------------------------------------
+- Unit testing
+----------------------------------------------------------------------------------------
+
+	=> testing small(single component or a module) component of the S/w
+		in gmail login, sent box, trash each one module
+	=> done by developers at code level
+	=> Tester also test the UI of single module called COMPONENT TESTING. Nothing to do with the code.
+	=> under white box testing
+	
+	Unit Testing Technique
+	----------------------
+	- Basis Path testing	- Testing programme each line by line, Each line should be executed atleast once
+	- Control Structure Testing	- 
+	- Conditional Coverage	- Conditions are working properly or not
+	- Loops coverage - Verify loop starting from begining or not, Wheather working properly or not
+	- Mutation Testing	- Testing s/w with different data combination like valid user name and pass, with invalid user and pass
+
+* Can be done by automation tools like "JUNIT"
+
+----------------------------------------------------------------------------------------
+- Integration testing
+----------------------------------------------------------------------------------------
+
+	=> Combining multiple modules as a single module and testing the data flow
+	=> Checking data communication (data flow) between different modules
+	=> Under white box testing
+
+# Sometime testers also do integration testing
+	Ex - Login page of gmial (UI) with valid data should it goes to inbox or not
+
+
+	Types Of Integration Testing
+	----------------------------
+	= Incremental Integration Testing : 
+	= Non-Incremental Integration Testing :
+
+
+
+	= Incremental Integration Testing :
+-----------------------------------------------
+		- Incrementally adding the modules and testing the data flow between the modules
+		- Adding modules one by one NOT Testing all the modules at once
+
+	2 Approaches of Incremental Integration Testing :
+		1) Top Down Approach
+		2) Bottom Up Approach
+
+			Top Down Incremental Integration Testing
+			------------------------------------------
+				- Incrementally adding the modules and testing the data flow between the modules and ENSURE the module added is 
+				  the child of the preveious module.
+				- ex- in gmail compose is the PARENT MODULE, after compose mail send to sent box (Sent box is the CHILD MODULE or
+				  SUB MODULE )
+
+
+			Bottom Up Approach
+			---------------------
+				- Incrementally adding the modules and testing the data flow between the modules and ENSURE the module added is 
+				  the PARENT MODULE of the preveious module.
+				- Ex- 1st Test sent box the email should be there in the sent box which was compose
+
+			Sandwich Approach
+			----------------
+				- Combination of both approach
+
+
+
+
+	= Non-Incremental Integration Testing :
+	------------------------------------------
+	- Adding all the modules at one goal and test the data flow in between the modules
+
+		Drawbacks:
+		-----------
+		- We might miss data flow between some modules
+		- Difficult to find the root cause of any defect (Which module contain the defect)
+
+---------------------------------------------------------------------------------------------------
+- System testing
+---------------------------------------------------------------------------------------------------
+
+	=> Testing over all working Funnctionality of the s/w with respect to client requirements.
+	=> It is a blackbox testing technique 
+	=> By the TESTER
+	=> It is done after Integration Testing
+	=> After completion of component testing and integration testing System testing is started
+	=> Each and every components working or not
+	=> It is not on the developer Enviournment, It is the replication of the Customer env
+
+It focusses on below aspects :
+	- User Interface Testingn ( GUI Testing )
+	- Functional Testing
+	- Non-Functional Testing
+	- Usability Testing
+
+
+GUI Testing
+----------------
+	- It the process of testing the user interface of an application
+	- It include all the elements such as checkbox, buttons, color, fonts, sizes, icons, content and images
+	- It is the testing of the frontend
+
+Checklist should be match with the WIREDFRAMES ( Design Document prepared before s/w)
+
+		GUI Testing checklis
+		--------------------
+		- Testing size, position, width of the element
+		- Testing of error message that are getting displayed
+		- Testing different sections of the screen
+		- Testing of the font readable or not
+		- Testing of the screenin different resoution with zoom in or zoom out Where elements positions should not overlap
+		- Testing the alignment of the text and other elements like icons, buttons, etc are in proper place or not
+		- Testing the colors of the fonts
+		- Testing images have good clarity or not
+		- Testing alignment of the images
+		- Testing of spellings
+		- Users must not frustarted wit h the UI by seeing the fonts or colors etc
+		- Testing weather the interface is attractive or not 
+		- Testing the scrollbars according to the size of the page if any
+		- Testing the disabled fields if any( IF something is in disabled stage that must not accept any input)
+		- Testing the size of the images (make sure images should not have big size and with good clarity, large size will slow the sys)
+		- Testing the headings properly aligned or not
+		- Testing the color of the hyperlink
+		- Testing UI elements like buttons, textbox, text area, checkbox, radio buttons, drop downs, links etc
+
+
+Usability Testing
+-------------------
+	- Testing the easyness of the application
+	- User can feel the easyness while using the s/w
+	- Wheather the s/w provideing help to the user or not
+	- Context sensitive help - where ever user stuck during using the s/w user should get help how to use
+
+
+Functionality Testing
+-----------------------
+	- Functionality -> Behaviour of the application
+	- Functional testing is about how features should work
+	
+
+Types of functional testing
+---------------------------
+	- Object Properties Testing
+	- Databse testing
+	- Error handling
+	- Calculations/Manipulations testing
+	- Links existence & links execution
+	- Cookies & Sessions
+
+
+Object Properties Testing
+----------------------------
+	Object -> It is an element
+	- Every object on a web page have some propertie 
+		Ex - Dropdown menu - it will show list of element but we can select only one at a time
+
+	- In Object Properties Testing we check the properties of objects present on the application
+		Ex- Enable, Disable, Visible, Focus.......
+
+Databse testing
+-------------------
+	- This is a backend testing
+	- Here we check DML Opertions (Data Manipulation Language) working fine or not
+	- Checking database operation w.r.t user operation
+	- Getting proper data or not
+	- Communication between database and UI working properly or not
+	- This include both whitebox and blackbox testing so called - GREY BOX TESTING
+	- Verify relationship between different tables (Normalization)
+	- Table level validation(column type, column length, number of columns.....)
+
+* Here we test operations like (These tests are done on UI)
+	- Insert
+	- Update
+	- Delete
+	- Select
+* ALso we write some Querries in the Database to check Data in the tables
+
+Error handling
+-------------------
+	- Tester verify the error message while performing incorrect actions on the application
+	- Error message should be readable
+	- User understandable/simple language
+
+Calculations/Manipulations testing
+-------------------------------------
+	- Tester should check verify the caluculation w.r.t requirement with different sets of data
+	Ex - in banking app maxm minum amount mentioned if input value not with in the range thenit should show error message
+
+Links existence & links execution
+----------------------------------
+	- Where exactly links are placed-----link exstance
+	- links are navigating to proper page or not---------link execution
+
+- Internal link -> navigate to another section of the same page
+- External link -> Navigate to another page
+- Broken link -> Do not navigate to any other page (Developer put this for future development) 
+
+- tester test Where exectaly placed wheather executing properly or not
+
+
+
+Cookies & Sessions 
+----------------------
+- Cookies -> The temporary files created by browser while user browsing the pages through Internet
+ - cookies testing -> browser creating cookies properly or not
+
+- Session -> 
+  
+  - session or time stamp created by server
+  - these are provided for security perpose
+  - Check session expireing or not
+
+------------------------
+Non Functional Testing
+------------------------
+=> It is done after functional testing
+=> It focus on customer expectation not on customer requirement
+
+requirement- features of the app
+expectation - must be secure, can handle load
+
+
+Types of Non Functional Testing
+-----------------------------------
+-> Done by different group with different skillset
+
+-> Performance Testing
+	-> Load Testing
+	-> Stress Testing
+	-> Volume Testing
+-> Security Testing
+-> Recovery Testing
+-> Compatibility Testing
+-> Configuration Testing
+-> Installation Testing
+-> Sanitation/Garbage Testing
+
+
+-> Performance Testing
+=======================
+
+-> Done by different group with different skillset
+
+-> Speed of the application
+-> Always done for Web based application not for dektop based app
+-> These are done by using tools on different evn by creating virtual machines
+
+	-> Load Testing -> Slowly increasing the load and verify the respond time and speed of the application
+	-> Stress Testing -> Suddenly increase or decrease the load on the application and check the speed of the application and stability of the application
+	-> Volume Testing -> Check How much data app can handle
+
+-> Security Testing
+====================
+
+-> Done by different group with different skillset
+
+-> How well app can provide security
+-> How secure the app is
+-> Verify Authentication and Autherisation 
+	-> Authentication -> Verify valid users can able to access the app or not
+	-> Autherisation -> Verify permissions of the valid users and what features can be accessed by the user
+
+-> Recovery Testing
+========================
+-> Wheather app having recovery feature or not
+-> Check the system changes to abnormal to normal
+
+Ex- If gmail shut down before sending the mail, mail should available in Draft section
+
+
+-> Compatibility Testing
+=========================
+-> Forward Compatibility => Old S/W should able to upgrade to new version, And compatible with same machine
+-> Backward Compatibility => 
+-> Hardware Compatibility => Able to work on multiple H/W configuration (Configuration Testing)
+
+
+-> Configuration Testing
+============================
+-> Hardware Compatibility => Able to work on multiple H/W configuration (Configuration Testing)
+
+
+-> Installation Testing
+==========================
+-> Check screens are clear to understand or not
+-> Screen navigation
+-> Simple or not
+-> Easy to uninstallation
+
+
+-> Sanitation/Garbage Testing
+==============================
+-> If any extra features or functionality given Rather than client requirement This is a bug
+-> Findout these bugs under Sanitation/Garbage Testing
+
+
+
+difference b/w Functional Testing Non Functional Testing
+=========================================================
+Functional Testing : validates functionality of the S/W
+Non Functional Testing : Verify the performance, security, reliability of the S/W
+
+Functional Testing : It describes what S/W does
+Non Functional Testing : It describes how S/W works
+
+Functional Testing : Concentrate on user requirement
+Non Functional Testing : Concentrate on user expectation
+
+Functional Testing : It is done before Non-Functional testing
+Non Functional Testing : It is done after Functional testing
+
+
+----------------------------------------------------------------------------------------------------
+- UAT (User Acceptance Testing)
+----------------------------------------------------------------------------------------------------
+
+	=>
+
+
+
+========================================================================================================================================================================================
+SOFTWARE TESTING TERMINOLOGY
+========================================================================================================================================================================================
+
+=> Regression Testing
+-----------------------
+-> Testing on modified build to make sure there will not be impact on existing functionality because of changes like adding/deleting/modifying features.
+
+
+3 types of Regression Testing
+
+Unit Regression Testing
+Regional Regression Testing
+Full Regression Testing
+
+Unit Regression Testing
+--------------------------
+-> Testing a specific module where modification done by developer
+
+Regional Regression Testing
+-----------------------------
+-> Testing the modified module along with the impacted module
+-> Impact analysis meeting conducted to identify impacted module with QA & Dev.
+   ------------------------IMPORTANT
+
+Full Regression Testing
+------------------------------
+-> Testing the main feature & remaining part of the application (Cause developer almost changes in many modules)
+
+
+=> Retesting
+---------------------------------
+-> Whenever a developer fixed a bug, tester will test the bug fix is called - Retesting
+-> Tester close the bug if it worked otherwise re-open and send to developer
+-> To ensure that the bugs detected previously and posted were fixed or not in the current build.
+
+Ex -> Build 1.0 was release. test team found a bug (ID 1.0.1, 1.0.2) and posted
+	-> Build 2.0 released . Test team testing the defects 1.0.1, 1.0.2 in build RETESTING
+
+
+=> SMOKE TESTING SANITY TESTING
+-------------------------------
+-> Basic Functionality Testing -> verify got the complete build or not is there any file missing or not,
+    build stable or not for furter teting, Installing properly or not, basic navigation function working or not
+-> Dont test the s/w in details
+
+SMOKE TESTING - done at initial level of the s/w development also called build verification testing, verify stability of the build
+
+SANITY TESTING - Done on stable build it check basic functionality of the s/w 
+-> if smoke and sanity testing failed the s/w rejected developer will build the s/w agian
+
+==========================================================================================================================================
+
+SMOKE TESTING - Test the build is stable or not
+
+SANITY TESTING - Check the build during the release phase to check the main functionality of the application without going deeper
+
+
+SMOKE TESTING - Done by both tester and developer 
+
+SANITY TESTING - Done by tester alone
+
+
+SMOKE TESTING - During testing build may be stable or unstable
+
+SANITY TESTING - During testing build is stable
+
+
+SMOKE TESTING - It is done on initial builds
+
+SANITY TESTING - Done on relatively stable builds
+
+
+SMOKE TESTING - It is part of basic testing
+
+SANITY TESTING - It is a part of regression testing
+
+
+SMOKE TESTING - Done every time on release of a new build
+
+SANITY TESTING - It is planned when there is no enough time to do in depth testing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
