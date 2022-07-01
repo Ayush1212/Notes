@@ -427,6 +427,287 @@ SANITY TESTING - It is planned when there is no enough time to do in depth testi
 
 
 
+Initial or Unstable build -------------> Smoke Testing ------------> yes------------I
+	I							I						I
+	I						      NO						I
+	I							I						I
+   BUILD 1						Build Rejected			System and Rgression Testing
+   Build 2							I						I
+   Build N							I						I
+	I						      NO						I
+	I							I						I
+Stable Build --------------------------> Sanity Testing -------------> Yes ---------I
+
+==========================================================================================================================================
+Exploratory Testing  (IMPORTANT)
+==========================================================================================================================================
+-> Without having any documentation or nothing We have to explore the application, understand completely snd test it.
+-> Understand the application, identify all possible scenarios, document it then use it for testing
+-> Test engineer will do exploratory testingwhen there is no requirement.
+
+-------------------------
+Drawback
+-------------------------
+-> Tester may misunderstand any feature as bug (or) any bug as a feature since there is no requirement
+-> Time consuming
+-> If there is any bug in the application, you will never know about it.
+
+
+==========================================================================================================================================
+ADHOC Testing
+==========================================================================================================================================
+-> Testing the application randomly testing the functionality W/O any documentation
+-> It is an INFORMAL testing aim to break the system (Finding Bugs)
+-> Tester test based on previous knowledge, tester have knowledge of the application based on experience
+-> This testing is usually an unplanned activity.
+
+==========================================================================================================================================
+Monkey/Gorilla Testing
+==========================================================================================================================================
+-> Testing the application randomly testing the functionality W/O any documentation
+-> Adhoc testing is an informal testing type with an aim to break the system
+-> Tester do not have knowledge of application
+-> Suitable for gaming application
+
+
+Adhoc Testing :        No Documentation
+Monkey Testing :       No Documentation
+Exploratory Testing :  No Documentation
+
+
+Adhoc Testing :        No Plan
+Monkey Testing :       No Plan
+Exploratory Testing :  No Plan
+
+
+Adhoc Testing :        Informal Testing
+Monkey Testing :       Informal Testing
+Exploratory Testing :  Informal Testing
+
+
+Adhoc Testing :        Tester know application functionality
+Monkey Testing :       Tester doesn't know application functionality
+Exploratory Testing :  Tester doesn't know application functionality
+
+
+Adhoc Testing :        Random Testing
+Monkey Testing :       Random Testing
+Exploratory Testing :  Random Testing
+
+
+Adhoc Testing :        Intension to break the application / Find out corner defects
+Monkey Testing :       Intension to break the application / Find out corner defects
+Exploratory Testing :  Intension to learn and explore the application functionality
+
+
+Adhoc Testing :        Any application
+Monkey Testing :       Gaming application
+Exploratory Testing :  Any application which is new to tester
+
+==========================================================================================================================================
+Positive Testing
+==========================================================================================================================================
+-> Testing the application with valid inputs called Positive Testing
+-> It test wheather an application behaves as expected with the Positive inputs
+
+Ex - There is a text box whichcan accept only numbers. Entering values up to 99999 will be acceptable by the system and any other values
+	apart from this should not be acceptable.
+
+	To do Positive testing, set the valid input values from 0 to 99999 and check whether the system is accepting the values
+
+==========================================================================================================================================
+Negatitive Testing
+==========================================================================================================================================
+-> Testing the application with invalid inputs called negative Testing
+-> It test wheather an application behaves as expected with the negative inputs
+
+Ex - There is a text box whichcan accept only numbers. Entering values up to 99999 will be acceptable by the system and any other values
+	apart from this should not be acceptable.
+
+	Negative testing can be performed by entering characters A to Z from a to z.
+	Either s/w system should not accept the values or else it should thrown an error message.
+
+
+==========================================================================================================================================
+Positive V/S Negative Test Cases
+==========================================================================================================================================
+
+Ex - If a text box is listed as a feature and in FRS it is mentioned as text box accepts 6 - 20 characters and only alphabets.
+
+Positive Test Cases :
+-----------------------------
+-> Textbox accepts Characters.
+-> Textbox accepts upto 20 char length
+-> Textbox accepts any value in between 6 - 20 char length
+-> Textbox accepts all alphabets
+
+Negative Test Cases :
+-----------------------------------------------
+-> Textbox should not accept less than 6 chars
+-> Textbox should not accept char more than 20 char
+-> Textbox should not accept special char
+-> Textbox should not accept Numericals
+
+==========================================================================================================================================
+END to END testing
+==========================================================================================================================================
+-> Testing overall functionalities of the system including the data integration among all the modules is called en to end testing
+-> Testing the overall functionality of the app which include each and every module in the application
+
+1) Login
+2) Add new customer
+3) Edit customer
+4) Delete customer
+5) Logout
+
+
+==========================================================================================================================================
+Globalization and Localization Testing
+==========================================================================================================================================
+
+Globalization Testing
+-----------------------------
+-> Performed to ensure thesystem or s/w can run in any cultural or local environment.
+-> Different aspects of the s/w are tested to ensure that it supports every language and different attributes.
+-> It tests the different currency formats, mobile number formats and address formats are supported by the application
+
+Ex- Facebook supports many of the languages and it can be accessed by people of different countries
+
+
+Localization Testing :
+-------------------------------
+-> Perfoormed to check system or s/w for a specific geographical and cultural environment
+-> Localized product only supports the specific kind of language and is usable only in specific region
+-> It testes the specific currency formats, mobile number formats and address formats are supported by the application
+
+Ex- Baidu.com supports only chinese language and can be accessed only by people of few countries.
+
+
+
+==========================================================================================================================================
+Test Design Techiniques
+==========================================================================================================================================
+-> It is used to prepare data for testing
+
+1) Data - Used for testing
+2) Coverage - Whatever data we prepare that data should cover all the test scenario
+
+-> By using test designtechniquewe can prepare data ehich can cover each and every functionality
+-> By using TDT we prepare minimum data which can cover maximum. TDT used to reduce data and increase the coverage
+
+Test case design technique (technique used for testing)
+-----------------------------------------------------------------
+-> we use technique to reduce test data and increase the coverage
+
+1) Equivalent class partitioning (ECP)
+2) Boundary Value Analysis (BVA)
+3) Decision Table based testing
+4) State Transition
+5) Error Guessing
+
+
+1. Error gusseing
+------------------------------
+	simple gusseing the values to test the application Without any specific rules
+ 
+		Ex- amount 5000 - 50000
+		we can test with any random value within this limit beyond this will show error message
+		1000 - error message
+		5000 - accept
+	minimum test case not require
+	boundary value not be covered
+Ex: Submitting a form without entering values
+
+2. Equivalance Class Partitioning
+--------------------------------------
+	-> Partition data into various classes and we can select data according to class then test
+	-> It reduce the number of test-cases and save time for testing
+
+	if req is range of value then test with one valid and 2 invalid
+		if range 1 - 500
+
+			  1 - 100 --------> 54 --------> valid
+			101 - 200 --------> 141 -------> valid
+			201 - 300 --------> 281 -------> valid
+			301 - 400 --------> 399 -------> valid
+			401 - 500 --------> 451 -------> valid
+
+			4999 - EM
+
+			4000000 - EM
+
+	if the req is set of values then test case for one valid and 2 invalid
+		if set of value : 1 , 5, 9 ,11
+			1 - accepted
+			0 - EM
+			4 - EM
+
+	if req is in boolean derive the test case for both
+		Boolean : Obama is CM of Kerla
+		True
+		False
+	
+
+3. BVA (boundary value analysis)
+---------------------------------------
+-> Check the boundaries of the input not all the inputs
+
+if req is of range of values
+[ a , b] -> then derive test case for a, a-1, a+1, b, b+1, b-1
+
+if value given 5000, 50000
+
+5000 - Accepted
+4999 - EM
+5001 - Accepted
+
+50000 - Accepted
+49999 - EM
+50001 - Accepted
+
+4) Decision Table based testing
+-------------------------------------
+-> also called as cause-Effect table
+-> used if we have more conditions and correspondings actions
+-> Here we deal with combination of inputs
+-> to identify the test cases with decision table, we consider conditions and actions.
+Ex- Transfer money online to an account
+	
+Conditions
+-----------
+ -> Account already approved
+ -> OTP matched
+ -> Sufficient money in account
+
+Action
+----------
+  -> Transfer money
+  -> Show insufficient amount message
+  -> Block the transaction incase of suspicious transaction
+
+
+5) State Transition
+----------------------
+-> It is used if different stages are there
+
+Ex- login page of an application which locks the user name after three wrong attempts of password
+
+	1st attempt ---> pass ----> Home page
+			---> Fail ----> 2nd attempt
+
+	2nd attempt ---> pass ----> Home page
+			---> Fail ----> 3rd attempt
+
+	3rd attempt ---> pass ----> Home page
+			---> Fail ----> Lock the account
+
+
+
+==========================================================================================================================================
+Input Domain Testing
+==========================================================================================================================================
+-> The value will be verified in the text box/ INput fields.
+-> We use ECP & BVA technique
 
 
 
@@ -458,3 +739,9 @@ SANITY TESTING - It is planned when there is no enough time to do in depth testi
 
 
 
+
+
+
+
+
+0
