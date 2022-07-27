@@ -711,6 +711,216 @@ Input Domain Testing
 
 
 
+==========================================================================================================================================
+STLC (SOFTWARE TESTING LIFE CYCLE)
+==========================================================================================================================================
+=> Requirement Analysis > Test Planning > Test Case Development > Environment Setup > Test Execution > Test Cycle Clousre
+
+
+Test Plan
+======================
+-> It is a document that describe test scope, test strategy, objectives, schedule, deliverables and resources requires for testing
+-> Done before testing
+
+Test Plan template Contents:
+------------------------------
+-> Overview - Small description
+-> Scope - What to test what not to test based on customer requirement
+-> Test Strategy - Which method/Strategy we are going to use for testing
+-> Defect Reporting Procedure - How to report bugs and how to report this to the developer
+-> Roles and responsibility - Which roles should be performed by whome, who will done what job
+-> Test Schedules - Specific test schedules which task should be completed by which time
+-> Test Deliverables - after each and every phase of testing we have to submit some documents 
+-> Entry and exit criteria - When to enter when to exit from testing
+-> Suspension & Resumption criteria - We have to stop testing on a sudden due to some issue then we have to resume our testing after 
+    resolving the issue, on which case we have to stop testing and on which case we have to resume that specified on testing doc.
+-> Tools - What kinds of tools we are going to use in testing
+-> Risk and mitigations - What will be the possible risk on project, mitigation plan means backup plan
+		Some person leave company in between so we have to replace someone
+-> Approvals - From whome we aill get what type of approvals
+
+
+
+
+==========================================================================================================================================
+USE CASE, TEST SCENARIO & TEST CASE
+==========================================================================================================================================
+
+Use Case
+-------------------
+-> Describes the requirements
+-> Helps us to understand requirement more clearly
+-> It mention in FRS (Function Requirement Specification) document
+-> It is written by Product manager or Product owners will write 
+
+It contains three Items
+
+Actor => Which is the user, It can be a single person or a group of people
+
+Action => Which is to reach the final outcome
+
+Goal/Outcome => Which is the successful user outcome
+
+
+
+Test Scenario
+----------------------
+-> Apossible area to be tested 
+-> What to test
+-> We use use cases to derive test scenario
+-> Written by tester
+
+
+Test Case
+---------------------
+-> Step by step actions to be performed to validate functionality of Application under test
+-> How to test
+-> It contains steps, Expected results & actual result
+-> Test Scenario is input to write test case
+-> Written by tester
+
+
+Use Case V/S Test Case
+============================
+-> UC - It describe functional Requirement
+	  Prepared by Bussiness Analyst(BA)
+-> TC - It describe test steps/Procedure
+	  Prepared by Test Engineer
+
+
+Test Scenario V/S Test Case
+============================
+-> TS - What to test
+-> TC - How to test
+
+Ex -  TS  - Checking functionality of login button
+	TC1 - Click the button w/o User name and Password
+	TC2 - Click button Only entering username
+	TC3 - lick button while entering wrong UN & Wrong PASS 
+
+
+
+TEST SUITE
+==================================
+-> It is a group if test cases which belongs to same category
+
+
+
+What is Test case
+==========================
+-> It is a set of actions executed to validate particular feature or functionality of your s/w 
+-> It is a document.
+-> Initially prepared with Excel or Word Doc then upload to tool after getting Approved
+
+
+Test Case Contents
+--------------------
+-> Test case ID - Every TC have an unique ID
+-> TC Title - Specific title (Small title)
+-> Description - 3 To 4 lines of description
+-> Pre Condition - Able to login, able to install
+-> Priority - Which TC will be execute first and the order
+-> Requirement ID - ID of the requirement
+-> Steps/Actions - What steps and actions to be taken
+-> Expected result - What should be the expected result
+-> Actual Result
+-> Test Data - Prepare test data beforewriting the TC
+
+
+
+
+==========================================================================================================================================
+Requirement Traceability Matrix (RTM)
+==========================================================================================================================================
+-> Main purpose of RTM is to see that all TC are covered so that no functionality should miss while doing s/w testing.
+-> It is prepared by tester
+
+
+RTM parameters
+---------------
+- Requirement ID
+- Req Description
+- Test case ID's
+
+
+==========================================================================================================================================
+Test Environment
+==========================================================================================================================================
+-> It is the platform build for test case execution on S/W
+-> It prepared by integration of all required S/W and H/W
+-> It is the simillar environment as customer env
+-> ANother name TEST BED
+
+
+==========================================================================================================================================
+Test Execution
+==========================================================================================================================================
+-> In this phase testing is done based on test plans and test cases prepared
+
+Entry Criteria
+====================
+-> TC, TD, TP
+
+Activities
+====================
+-> Test case are executed based on the test planning
+-> Status of TC are marked like passed , failed, blocked, run
+-> Documentation of test results and log defects for failed cases is done
+-> All the blocked and failed test cases are assigned bug IDs
+-> Retesting once the defects are fixed
+-> Defects are tracked till closure
+
+Deliverables
+===================
+-> It consists of defects and TC execution report with completed results
+
+
+Guidelines for test execution
+====================================
+-> Build being deployed to the QA env is the most imp part of test execution
+-> Test execution is done in QA (Quality Assurance) Env
+-> Test execution happens in multiple cycles
+-> TE consists of Execution the TC + Test scripts (If automation)
+
+
+
+==========================================================================================================================================
+Defects/Bugs
+==========================================================================================================================================
+* Error in developer end
+* Missmatch HUman error
+
+-> Any mismatch functionality b/w expected and actual is called as defect/bugs/issue
+-> Duringtest execution test engg. are reporting mismatches as defects to developer through tools
+
+Defect reporting tools :
+- Clear Quest
+- Devtrack
+- Jira 
+- Quality center
+- Bug jilla
+
+** Jira and Quality center are test management tools, We can track each and every activity during testing from begining
+## Jira is an Agile tool used by both developer and tester also
+
+
+
+==========================================================================================================================================
+Defect report contents
+==========================================================================================================================================
+-> Defect ID - Unique ID for each developer
+-> Defect description
+-> Version - Version of the application in which defect was found
+-> Steps - Detailed steps along screenshots with which developer can reproduce the defect
+-> Date Raised - date when the defect is raised
+-> Reference - What are the reference documents we refer to consider that as a bug
+-> Detected by - Name/ID of the test engg
+-> Status - Status of the defect new,open(Developer is working on the bug),closed
+-> Fixed by - Name/ID of the developer
+-> Date closed - Date on which bug closed 
+-> Severity - Describe the impact of the defect on the application
+-> Priority - Defect fixing urgency
+** Severity & Priority could be high/Medium/Low based on the impact
 
 
 
@@ -723,25 +933,3 @@ Input Domain Testing
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-0
