@@ -135,3 +135,8 @@ $ helm list
 
 $ helm delete <release-name>
 
+========================
+WHAT IS HELM CHART ?
+========================
+=> It is the collection of manifest files to install software in kubernetes
+CHART=> collection of manifest files 

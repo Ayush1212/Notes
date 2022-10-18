@@ -82,10 +82,14 @@ $ sudo ./aws/install
 
 ############ Configure AWS Cli with Credentials ###############
 
-Access Key ID : AKIA4MGQ5UW7R76
-Secret Access Key : ZoZZW+063Km49zi19FbPC3Ijo15auV
 
 $ aws configure
+
+AWS Access Key ID [None]: AKIAZQS5UMUZWROGGBD6
+AWS Secret Access Key [None]: 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
+Default region name [None]: ap-south-1
+Default output format [None]: table
+
 
 Note: We can use root user accesskey and secret key access
 
