@@ -115,6 +115,8 @@ $ sudo cat /opt/sonatype-work/nexus3/admin.password
 
 	/opt/nexus/etc/nexus.properties
 
+=> Diasble unknown access
+
 
 ####################################
 Integrate Maven with Nexus
@@ -124,17 +126,27 @@ Integrate Maven with Nexus
 
 -> We will create 2 types of repositories in Nexus
 
-	1) snapshot
+	1) snapshot (project development under progress)
 
-	2) release
+	2) release (project development complete)
 
 -> If project is under development then that project build artifacts will be stored into snapshot repository
 
 -> If project development completed and released to production then that project build artifacts will be stored to release repository
 
-Snanpshot Repo URL : http://13.233.238.64:8081/repository/ashokit_snapshot_repo/
 
-Release Repo URL : http://13.233.238.64:8081/repository/ashokit_release_repo/
+go to Repo > Create repo > 
+   name repo > Version Policy
+
+
+
+Snanpshot Repo URL : http://3.109.47.156:8081/repository/mysnaprepo/
+
+Release Repo URL : http://3.109.47.156:8081/repository/releaserepo/
+
+
+=> Configure in pom.xml
+	in <distributionManagement>
 
 Note: Based on <version/> name available in project pom.xml file it will decide artifacts should be stored to which repository
 
@@ -155,7 +167,10 @@ Note: Based on <version/> name available in project pom.xml file it will decide 
 	</snapshotRepository>	
 </distributionManagement>
 
+
+
 -> Nexus Server Credentials will be configured in Maven "settings.xml" file
+----------------------------------------------------------------------------------
 
 -> Maven Location : C:\apache-maven-3.8.5\conf
 
@@ -164,7 +179,7 @@ Note: Based on <version/> name available in project pom.xml file it will decide 
 	<server>
 		<id>nexus</id>
 		<username>admin</username>
-		<password>admin@123</username>
+		<password>admin@123</password>
 	</server>
 
 
@@ -178,6 +193,9 @@ Remote Repository
 ##################
 
 -> Remote repository used for shared libraries
+
+=> Shared libraries -> are common jar files which we want to use in multiple projects
+=> Maven central repo is public anybody can access this
 
 -> If we want to use few jar files in multiple projects in the company then we will use Remote Repository 
 
