@@ -192,9 +192,11 @@ RUN echo "RUN Three"
 $ docker build -t ashokit-hw .
 
 # Tag Docker image 
+syntax: docker tag <image-name> <docker-username>/<tagged-image-name>
 $ docker tag ashokit-hw ashokit/ashokit-hw
 
 # Push docker image
+syntax: docker push <username>/<tagged-image-name>
 $ docker push ashokit/ashokit-hw
 
 ++++++++++++++++++++++
