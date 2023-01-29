@@ -132,6 +132,8 @@ Ansible Playbook
 Ansible Playbooks are expressed in YAML format and serve as the repository for the various tasks that will be executed on the Managed Nodes (hosts).
 
 Playbooks are a collection of tasks that will be run on one or more hosts.
+single task provided is called module
+if multiple task to be performed then called playbook
 
 
 +++++++++++++++++++
@@ -332,6 +334,7 @@ $ ansible all -m ping
 +++++++++++++++++++++++
 Ansible AD-HOC Commands
 +++++++++++++++++++++++
+these commands used to perform single task
 
 -> switch to ansible user and run ansible ad-hoc commands 
 
